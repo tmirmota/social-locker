@@ -1,10 +1,21 @@
 :root {
   --video-color: rgb(111, 147, 215);
+  --video-color-hover: rgb(137, 168, 227);
+
   --paper-color: rgb(233, 205, 103);
+  --paper-color-hover: rgb(240, 216, 132);
+
   --facebook-color: rgb(43, 93, 168);
+  --facebook-color-hover: rgb(61, 113, 193);
+
   --linkedin-color: rgb(43, 93, 168);
+  --linkedin-color-hover: rgb(61, 113, 193);
+
   --email-color: rgb(205, 134, 40);
+  --email-color-hover: rgb(221, 153, 64);
+
   --disabled-color: #e9e9e9;
+  --disabled-color-hover: #e9e9e9;
 }
 
 .button-icon-container {
@@ -19,14 +30,18 @@
   opacity: 1 !important;
 }
 
-
 .fa[disabled]{
-  color: var(--disabled-color);
+  color: var(--disabled-color) !important;
 }
 
 #button-video {
   background-color: var(--video-color);
   border: var(--video-color);
+}
+
+#button-video:hover,
+#button-video:active {
+  background-color: var(--video-color-hover);
 }
 
 #icon-video {
@@ -38,6 +53,11 @@
   border: var(--paper-color);
 }
 
+#button-paper:hover,
+#button-paper:active {
+  background-color: var(--paper-color-hover);
+}
+
 #icon-paper {
   color: var(--paper-color);
 }
@@ -45,6 +65,11 @@
 #button-facebook {
   background-color: var(--facebook-color);
   border: var(--facebook-color);
+}
+
+#button-facebook:hover,
+#button-facebook:active {
+  background-color: var(--facebook-color-hover);
 }
 
 #icon-facebook {
@@ -56,6 +81,11 @@
   border: var(--linkedin-color);
 }
 
+#button-linkedin:hover,
+#button-linkedin:active {
+  background-color: var(--linkedin-color-hover);
+}
+
 #icon-linkedin {
   color: var(--linkedin-color);
 }
@@ -63,6 +93,10 @@
 #button-email {
   background-color: var(--email-color);
   border: var(--email-color);
+}
+
+#button-email:hover {
+  background-color: var(--email-color-hover);
 }
 
 #icon-email {
