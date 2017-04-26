@@ -8,8 +8,16 @@
   margin-bottom: 5rem;
 }
 
-.sociallocker-copy {
+.sociallocker-app-copy {
   font-size: 20px;
-  font-weight: bold;
   margin-top: 20px;
+}
+
+.footer-container {
+  margin-top: 3rem;
+}
+
+.footer-copy {
+  color: #c7c7c7;
+  margin-top: 2rem;
 }

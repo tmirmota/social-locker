@@ -9,7 +9,8 @@ import ShareButtons from './components/ShareButtons';
 class App extends Component {
   state = {
     clicks: 1,
-    percent: 20
+    percent: 20,
+    gameComplete: false
   }
 
   handleClick = () => {
@@ -17,10 +18,11 @@ class App extends Component {
     const goal = 4;
     const clicks = this.state.clicks + 1;
     const percent = clicks / goal * 100;
-    this.setState({ percent, clicks });
+    const gameComplete = percent >= 100;
+    this.setState({ percent, clicks, gameComplete });
   }
   render() {
-    const { percent} = this.state;
+    const { percent, clicks, gameComplete } = this.state;
     return (
       <div className="wrapper">
         <div className="container socialLocker-container">
@@ -31,16 +33,24 @@ class App extends Component {
             </div>
           </section>
 
-          <ProgressBar percent={percent} />
+          <ProgressBar percent={percent} gameComplete={gameComplete} />
 
           <section className="row">
             <div className="small-12 column text-center">
-              <p className="sociallocker-copy">Unlock the hidden Foodee prize. Complete 4 of 6 tasks below.</p>
+              <p className="sociallocker-app-copy">Unlock the hidden Foodee Rewards promo code.<br /><strong>Completed {clicks} of 4 tasks below.</strong></p>
             </div>
           </section>
 
-          <UnlockBox percent={percent} />
-          <ShareButtons handleClick={this.handleClick} clicks={this.state.clicks} />
+          <UnlockBox percent={percent} gameComplete={gameComplete} />
+          <ShareButtons handleClick={this.handleClick} clicks={clicks} />
+
+          <footer className="row footer-container">
+            <div className="small-12 column text-center">
+              <hr />
+              <p className="footer-copy"><strong>Work Hard, Eat Well.</strong> Curated menus from top local restaurants delivered to your office.</p>
+              <a href="https://food.ee/" target="_blank"><img src="https://cdn2.hubspot.net/hubfs/2116999/automation/grey_logo.png" alt="Foodee Logo" width="100"/></a>
+            </div>
+          </footer>
         </div>
       </div>
     );
