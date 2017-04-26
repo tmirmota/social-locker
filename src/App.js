@@ -21,6 +21,25 @@ class App extends Component {
     const gameComplete = percent >= 100;
     this.setState({ percent, clicks, gameComplete });
   }
+  handleGame = () => {
+    const { gameComplete, clicks } = this.state;
+    if (gameComplete) {
+      return (
+        <p className="sociallocker-app-copy">Congratulations!
+          <br />
+          <strong>Completed tasks, use promo code!</strong>
+        </p>
+      );
+    } else {
+      return (
+        <p className="sociallocker-app-copy">Unlock the hidden Foodee Rewards promo code.
+          <br />
+          <strong>Completed {clicks} of 4 tasks below.</strong>
+        </p>
+      );
+    }
+  }
+
   render() {
     const { percent, clicks, gameComplete } = this.state;
     return (
@@ -37,7 +56,7 @@ class App extends Component {
 
           <section className="row">
             <div className="small-12 column text-center">
-              <p className="sociallocker-app-copy">Unlock the hidden Foodee Rewards promo code.<br /><strong>Completed {clicks} of 4 tasks below.</strong></p>
+              {this.handleGame()}
             </div>
           </section>
 

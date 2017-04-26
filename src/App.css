@@ -13,6 +13,10 @@
   margin-top: 20px;
 }
 
+footer {
+  background-color: transparent !important;
+}
+
 .footer-container {
   margin-top: 3rem;
 }
