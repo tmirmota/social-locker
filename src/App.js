@@ -14,7 +14,7 @@ class App extends Component {
 
   handleClick = () => {
     // Set Goal Here
-    const goal = 5;
+    const goal = 4;
     const clicks = this.state.clicks + 1;
     const percent = clicks / goal * 100;
     this.setState({ percent, clicks });
@@ -23,7 +23,7 @@ class App extends Component {
     const { percent} = this.state;
     return (
       <div className="wrapper">
-        <div className="container">
+        <div className="container socialLocker-container">
 
           <section className="row">
             <div className="small-12 column text-center header-image">

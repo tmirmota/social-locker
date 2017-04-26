@@ -2,7 +2,7 @@ import React from 'react';
 import './ProgressBar.css';
 
 export const ProgressBar = ({percent}) => {
-  const style = {width: `${percent}%`};
+  const meter = {width: `${percent}%`};
   return (
     <div className="row">
       <div className="medium-11 medium-centered column text-center">
@@ -12,7 +12,7 @@ export const ProgressBar = ({percent}) => {
           </div>
           <div className="small-10 columns align-self-middle">
             <div className="progress fdm-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
-              <span className="progress-meter fdm-progress-meter" style={style}>
+              <span className="progress-meter fdm-progress-meter" style={meter}>
               </span>
             </div>
           </div>
