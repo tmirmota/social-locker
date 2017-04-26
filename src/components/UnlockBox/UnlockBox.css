@@ -1,0 +1,15 @@
+.unlockbox {
+  background-color: #FFFFFF;
+  border: 2px dashed rgb(158, 158, 158);
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.unlockbox-content {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.unlockbox-lock {
+  color: rgb(181, 181, 181);
+}
