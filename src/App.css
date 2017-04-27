@@ -1,5 +1,5 @@
 .socialLocker-container {
-  background-color: #fafafa;
+  background-color: #F9F9F9;
   min-height: 100vh;
 }
 
@@ -10,6 +10,7 @@
 
 .sociallocker-app-copy {
   font-size: 20px;
+  color: #4B4B4B;
   margin-top: 20px;
 }
 
@@ -22,6 +23,6 @@ footer {
 }
 
 .footer-copy {
-  color: #c7c7c7;
+  color: #BFBFBF;
   margin-top: 2rem;
 }

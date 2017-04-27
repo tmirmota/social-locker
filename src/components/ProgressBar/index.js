@@ -3,6 +3,7 @@ import './ProgressBar.css';
 
 export const ProgressBar = ({percent, gameComplete}) => {
   const goldKey = { color: 'rgb(233, 193, 48)' };
+  const progress = percent / 25;
   const meter = {width: `${percent}%`};
   return (
     <div className="row">
@@ -14,6 +15,7 @@ export const ProgressBar = ({percent, gameComplete}) => {
           <div className="small-8 medium-10 columns align-self-middle">
             <div className="progress fdm-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
               <span className="progress-meter fdm-progress-meter" style={meter}>
+                <p>{progress} / 4</p>
               </span>
             </div>
           </div>

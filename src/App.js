@@ -9,7 +9,7 @@ import ShareButtons from './components/ShareButtons';
 class App extends Component {
   state = {
     clicks: 1,
-    percent: 20,
+    percent: 25,
     gameComplete: false
   }
 

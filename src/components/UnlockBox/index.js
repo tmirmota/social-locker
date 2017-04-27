@@ -2,14 +2,21 @@ import React from 'react';
 import './UnlockBox.css';
 
 export const UnlockBox = ({ percent, gameComplete }) => {
+  const startAtZero = percent === 25;
+  const greenOpacity = startAtZero ? 0 : percent / 100;
+  console.log(greenOpacity);
+
   // Styling
-  const greenOpacity = percent / 50;
-  const boxGreen = `rgba(74, 190, 46, .${greenOpacity})`;
-  const boxColor = { backgroundColor: boxGreen };
+  const boxBackground = `rgba(236, 246, 231, ${greenOpacity})`;
+  const boxBorder = `rgba(95, 189, 108, ${greenOpacity})`;
+  const boxColor = {
+    backgroundColor: boxBackground,
+    borderColor: boxBorder
+  };
 
   return (
     <div className="row">
-      <div className="small-10 small-centered medium-5 medium-centered column text-center unlockbox" style={boxColor}>
+      <div className="small-10 small-centered medium-5 medium-centered column text-center unlockbox" style={startAtZero ? null : boxColor}>
         <div className="unlockbox-content">
         { gameComplete ?
             <div>

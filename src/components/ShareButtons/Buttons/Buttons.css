@@ -1,21 +1,20 @@
 :root {
-  --video-color: rgb(111, 147, 215);
-  --video-color-hover: rgb(137, 168, 227);
+  --video-color: #48A1D9;
+  --video-color-hover: rgba(72, 161, 217, 0.75);
 
-  --paper-color: rgb(233, 205, 103);
-  --paper-color-hover: rgb(240, 216, 132);
+  --paper-color: #FEAC0E;
+  --paper-color-hover: rgba(254, 172, 14, 0.75);
 
-  --facebook-color: rgb(43, 93, 168);
-  --facebook-color-hover: rgb(61, 113, 193);
+  --facebook-color: #3B5998;
+  --facebook-color-hover: rgba(59, 89, 152, 0.75);
 
-  --linkedin-color: rgb(43, 93, 168);
-  --linkedin-color-hover: rgb(61, 113, 193);
+  --linkedin-color: #0077B5;
+  --linkedin-color-hover: rgba(0, 119, 181, 0.75);
 
-  --email-color: rgb(205, 134, 40);
-  --email-color-hover: rgb(221, 153, 64);
+  --email-color: #F05023;
+  --email-color-hover: rgba(240, 80, 35, 0.75);
 
-  --disabled-color: #e9e9e9;
-  --disabled-color-hover: #e9e9e9;
+  --disabled-color: #DEDEDE;
 }
 
 .button-icon-container {

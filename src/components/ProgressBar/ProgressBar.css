@@ -1,15 +1,16 @@
 .fdm-progress {
   height: 1.5rem !important;
   border-radius: 20px !important;
+  background-color: #4B4B4B !important;
   margin-top: 6px !important;
 }
 
 .fdm-progress-meter {
   border-radius: 20px;
-  background-color: lightgreen !important;
+  background-color: #5FBD6C !important;
   max-width: 100% !important;
 }
 
 .progressbar-arrow-right {
-  color: lightgreen;
+  color: #5FBD6C;
 }
