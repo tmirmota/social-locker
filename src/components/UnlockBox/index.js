@@ -4,7 +4,6 @@ import './UnlockBox.css';
 export const UnlockBox = ({ percent, gameComplete }) => {
   const startAtZero = percent === 25;
   const greenOpacity = startAtZero ? 0 : percent / 100;
-  console.log(greenOpacity);
 
   // Styling
   const boxBackground = `rgba(236, 246, 231, ${greenOpacity})`;
