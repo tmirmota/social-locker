@@ -13,6 +13,7 @@ class App extends Component {
     gameComplete: false
   }
 
+
   handleClick = () => {
     // Set Goal Here
     const goal = 4;
