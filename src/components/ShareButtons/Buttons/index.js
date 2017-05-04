@@ -2,27 +2,32 @@ import React, { Component } from 'react';
 import './Buttons.css';
 
 
-class Buttons  extends Component {
-  state = {
-    disabled: false
-  }
-
-  disabledButton() {
-    this.setState({ disabled: true });
+class Buttons extends Component {
+  componentWillMount() {
+    // Disable first button
+    const { number } = this.props;
+    const isFirstButton = number === 0;
+    if (isFirstButton) {
+      return this.setState({ disabled: true });
+    }
+    const { title } = this.props;
+    // Get disabled information from local storage
+    const disabled = localStorage.getItem(title) !== null;
+    this.setState({ disabled });
   }
 
   buttonClick = () => {
     this.props.handleClick();
-    this.disabledButton()
+
+    // Disable button
+    console.log(1);
+    this.setState({ disabled: true });
+
+    // Store state in local Storage
+    const { title } = this.props;
+    localStorage.setItem(title, true);
   }
 
-  componentWillMount() {
-    const { number } = this.props;
-    const isFirstButton = number === 0;
-    if (isFirstButton) {
-      this.disabledButton();
-    }
-  }
 
   render() {
     const { title, icon, button, url } = this.props;

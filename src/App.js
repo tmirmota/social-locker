@@ -9,18 +9,33 @@ import ShareButtons from './components/ShareButtons';
 class App extends Component {
   state = {
     clicks: 1,
-    percent: 25,
+    goal: 4, // Set goal here
     gameComplete: false
+  }
+  componentWillMount() {
+    // Use this to clear cache
+    localStorage.clear();
+    const clicks = Number(localStorage.getItem('clicks'));
+    const isStorage = clicks > 0;
+    const { goal } = this.state;
+    const gameComplete = clicks >= goal;
+    if (isStorage) {
+      this.setState({ clicks });
+      if (gameComplete) {
+        this.setState({ gameComplete: true });
+      }
+    }
   }
 
 
   handleClick = () => {
-    // Set Goal Here
-    const goal = 4;
+    const { goal } = this.state;
     const clicks = this.state.clicks + 1;
-    const percent = clicks / goal * 100;
-    const gameComplete = percent >= 100;
-    this.setState({ percent, clicks, gameComplete });
+    const gameComplete = (clicks >= goal);
+    this.setState({ clicks, gameComplete });
+
+    // Record clicks in local storage
+    localStorage.setItem('clicks', clicks);
   }
   handleGame = () => {
     const { gameComplete, clicks } = this.state;
@@ -42,7 +57,8 @@ class App extends Component {
   }
 
   render() {
-    const { percent, clicks, gameComplete } = this.state;
+    const { clicks, goal, gameComplete } = this.state;
+    const percent = gameComplete ? 100 : clicks / goal * 100;
     return (
       <div className="wrapper">
         <div className="container socialLocker-container">
