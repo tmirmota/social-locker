@@ -13,8 +13,8 @@ class App extends Component {
     gameComplete: false
   }
   componentWillMount() {
-    // Use this to clear cache
-    localStorage.clear();
+    // // Use this to clear cache
+    // localStorage.clear();
     const clicks = Number(localStorage.getItem('clicks'));
     const isStorage = clicks > 0;
     const { goal } = this.state;
