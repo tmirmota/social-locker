@@ -13,8 +13,9 @@ class App extends Component {
     gameComplete: false
   }
   componentWillMount() {
-    // // Use this to clear cache
+    // Use this to clear cache
     // localStorage.clear();
+
     const clicks = Number(localStorage.getItem('clicks'));
     const isStorage = clicks > 0;
     const { goal } = this.state;
@@ -43,7 +44,7 @@ class App extends Component {
       return (
         <p className="sociallocker-app-copy">Congratulations!
           <br />
-          <strong>Completed tasks, use promo code!</strong>
+          <strong>Completed tasks, receive a $20 Amazon gift card when you use this promo code!</strong>
         </p>
       );
     } else {
@@ -83,7 +84,7 @@ class App extends Component {
           <footer className="row footer-container">
             <div className="small-12 column text-center">
               <hr />
-              <p className="footer-copy"><strong>Work Hard, Eat Well.</strong> Curated menus from top local restaurants delivered to your office.</p>
+              <p className="footer-copy"><strong>Work Hard, Eat Well.</strong> Curated menus from top local restaurants delivered to your office.<br/><a href="http://try.food.ee/may-promo-terms-conditions-referral">Terms & Conditions</a></p>
               <a href="https://food.ee/" target="_blank"><img src="https://cdn2.hubspot.net/hubfs/2116999/automation/grey_logo.png" alt="Foodee Logo" width="100"/></a>
             </div>
           </footer>

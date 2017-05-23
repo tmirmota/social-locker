@@ -5,21 +5,22 @@ import Buttons from './Buttons';
 
 // Email Url
 const mailTo = "mailto:?";
-const emailSubject = "subject=".concat("look at this website");
-const emailBody = "body=".concat("Hi, I found this website and thought you might like it http://www.geocities.com/wowhtml/");
-const emailUrl = mailTo + emailSubject + "&" + emailBody;
+const bccTo = "bcc=order@food.ee";
+const emailSubject = "subject=".concat("Awesome corporate catering service - Foodee");
+const emailBody = "body=".concat("Hey, have you heard of Foodee?%0A%0AThey’re giving out Amazon gift cards with every order until the end of the month! All you have to do is share a post on social media. Offer ends May 31st, so get it while you can!%0A%0ACheck them out here: http://try.food.ee/share-n-earn");
+const emailUrl = mailTo + emailSubject + "&" + bccTo + "&" + emailBody;
 
 const buttons = [
   // Finished Step
   {title: "complete", icon: 'fa fa-eye', action: 'View', url: 'https://food.ee/'},
-  // Watch Our Video
-  {title: "video", icon: 'fa fa-play-circle-o', action: 'Watch', url: 'https://vimeo.com/204566011'},
-  // Download Our White Paper
-  {title: "paper", icon: 'fa fa-file-text-o', action: 'Read', url: 'https://cdn2.hubspot.net/hubfs/2116999/mark_simonson_-_proxima_nova_alt_regular-webfont.woff2'},
   // Share via Facebook
-  {title: "facebook", icon: 'fa fa-facebook', action: 'Share', url: 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffood.ee%2F&amp;src=sdkpreparse'},
+  {title: "facebook", icon: 'fa fa-facebook', action: 'Share', url: 'https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Ftry.food.ee%2Fshare-n-earn%3Futm_campaign%3DFoodee%2BSocial%2BLocker%26utm_medium%26utm_source%3Demail%26utm_content%3Dsocial_locker%26utm_term&amp;src=sdkpreparse'},
+  // Watch Our Video
+  {title: "video", icon: 'fa fa-play-circle-o', action: 'Watch', url: 'https://help.food.ee/customer/en/portal/articles/2721494-how-does-foodee-work-#ryan-video'},
+  // Download Our White Paper
+  {title: "paper", icon: 'fa fa-file-text-o', action: 'Read', url: 'https://www.food.ee/blog/corporate-catering-six-steps-organizing-perfect-work-event/'},
   // Share via LinkedIn
-  {title: "linkedin", icon: 'fa fa-linkedin', action: 'Share', url: 'https://www.linkedin.com/shareArticle?mini=true&url=https%3A//food.ee/&title=Foodee&summary=&source='},
+  {title: "linkedin", icon: 'fa fa-linkedin', action: 'Share', url: 'https://www.linkedin.com/shareArticle?mini=true&url=http%3A//try.food.ee/share-n-earn&title=Foodee&summary=&source='},
   // Share via Email
   {title: "email", icon: 'fa fa-envelope-o', action: 'Email', url: emailUrl}
 ];

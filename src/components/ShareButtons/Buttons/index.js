@@ -19,18 +19,26 @@ class Buttons extends Component {
   buttonClick = () => {
     this.props.handleClick();
 
+    const {title, button, url } = this.props;
+
     // Disable button
-    console.log(1);
     this.setState({ disabled: true });
 
     // Store state in local Storage
-    const { title } = this.props;
     localStorage.setItem(title, true);
+
+    const isSocialShare = button === "Share";
+    if (isSocialShare) {
+      window.open(url, '_blank', 'height=285,width=550,resizable=1');
+    } else {
+      window.open(url, 'height=285,width=550,resizable=1');
+    }
+
   }
 
 
   render() {
-    const { title, icon, button, url } = this.props;
+    const { title, icon, button } = this.props;
     const { disabled } = this.state;
     const styleIcon = `${icon} fa-3x`;
     const iconColor = `icon-${title}`;
@@ -41,17 +49,15 @@ class Buttons extends Component {
           <i className={styleIcon} id={iconColor} disabled={disabled}></i>
         </div>
         <div>
-          <a href={url} target="_blank">
-            <button
-              type="button"
-              className="button"
-              id={buttonColor}
-              disabled={disabled}
-              onClick={this.buttonClick}
-            >
-              {button}
-            </button>
-          </a>
+          <button
+            type="button"
+            className="button"
+            id={buttonColor}
+            disabled={disabled}
+            onClick={this.buttonClick}
+          >
+            {button}
+          </button>
         </div>
       </div>
     );

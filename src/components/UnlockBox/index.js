@@ -20,7 +20,8 @@ export const UnlockBox = ({ percent, gameComplete }) => {
         { gameComplete ?
             <div>
               <h4 className="unlockbox-subheading">Use Code:</h4>
-              <h2 className="unlockbox-heading">FOODCOMA</h2>
+              <h2 className="unlockbox-heading">SHARE20</h2>
+              <p></p>
             </div> :
             <i className="fa fa-lock fa-4x unlockbox-lock"></i> }
         </div>
