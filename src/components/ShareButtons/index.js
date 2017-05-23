@@ -27,7 +27,7 @@ const buttons = [
 
 class ShareButtons extends Component {
   renderButtons = () => {
-    const { handleClick } = this.props;
+    const { handleClick, clicks } = this.props;
 
     return buttons.map((button, index) => {
       const { title, icon, action, url } = button;
@@ -35,6 +35,7 @@ class ShareButtons extends Component {
               key={index}
               title={title}
               number={index}
+              clicks={clicks}
               icon={icon}
               button={action}
               url={url}

@@ -15,6 +15,8 @@
   --email-color-hover: rgba(240, 80, 35, 0.75);
 
   --disabled-color: #DEDEDE;
+
+  --arrow_box-color: #5FBD6C;
 }
 
 .button-icon-container {
@@ -100,4 +102,71 @@
 
 #icon-email {
   color: var(--email-color);
+}
+
+.tooltip-parent {
+  position: relative;
+  width: 100%;
+}
+
+.tooltip-starter {
+  color: white;
+  background-color: #FEAC0E;
+  border-radius: 5px;
+  position: absolute !important;
+  top: 0px;
+  left: 10%;
+  margin: 0 auto;
+  text-align: center;
+  width: 80%;
+  padding: 5px 10px;
+  -webkit-animation-duration: 5s;
+   animation-duration: 5s;
+   -webkit-animation-fill-mode: both;
+   animation-fill-mode: both;
+}
+
+
+@-webkit-keyframes fadeIn {
+   0% {opacity: 0;}
+   100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+   0% {opacity: 0;}
+   100% {opacity: 1;}
+}
+
+.fadeIn {
+   -webkit-animation-name: fadeIn;
+   animation-name: fadeIn;
+}
+
+.arrow_box {
+	position: relative;
+	background: var(--arrow_box-color);
+	border: 4px solid #;
+}
+.arrow_box:after, .arrow_box:before {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_box:after {
+	border-color: rgba(114, 89, 213, 0);
+	border-bottom-color: var(--arrow_box-color);
+	border-width: 6px;
+	margin-left: -6px;
+}
+.arrow_box:before {
+	border-color: rgba(0, 0, 0, 0);
+	border-bottom-color: #;
+	border-width: 12px;
+	margin-left: -12px;
 }

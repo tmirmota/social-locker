@@ -33,7 +33,21 @@ class Buttons extends Component {
     } else {
       window.open(url, 'height=285,width=550,resizable=1');
     }
+  }
 
+  gameTip = () => {
+    const { number, clicks } = this.props;
+    const isStart = number === 1 && clicks === 1;
+    if (isStart) {
+      console.log('tool');
+      return (
+        <div className="tooltip-parent text-center">
+          <div className="tooltip-starter text-center fadeIn arrow_box">Start here!</div>
+        </div>
+      );
+    } else {
+      return false;
+    }
   }
 
 
@@ -59,6 +73,7 @@ class Buttons extends Component {
             {button}
           </button>
         </div>
+        {this.gameTip()}
       </div>
     );
   }
