@@ -17,8 +17,25 @@
 
 .unlockbox-subheading {
   color: rgb(74, 190, 46);
+  font-family: "bebas_neue_regularregular";
+  font-size: 20px;
+  font-weight: normal;
+  letter-spacing: 1.25px;
+  line-height: 1.4;
+  vertical-align: super;
 }
 
 .unlockbox-heading {
   color: rgb(53, 140, 32);
+  font-family: "bebas_neuebold";
+  font-size: 34px;
+  font-weight: normal;
+  letter-spacing: 1.5px;
+  line-height: 1.29;
+}
+
+.unlock-btn {
+  margin-top: 20px;
+  max-width: 200px;
+  min-width: 0% !important;
 }
