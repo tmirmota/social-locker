@@ -16,7 +16,7 @@
 
   --disabled-color: #DEDEDE;
 
-  --arrow_box-color: #5FBD6C;
+  --arrow_box-color: #4B4B4B;
 }
 
 .button-icon-container {
@@ -112,7 +112,6 @@
 .tooltip-starter {
   color: white;
   background-color: #FEAC0E;
-  border-radius: 5px;
   position: absolute !important;
   top: 0px;
   left: 10%;

@@ -18,11 +18,10 @@
 .unlockbox-subheading {
   color: rgb(74, 190, 46);
   font-family: "bebas_neue_regularregular";
-  font-size: 20px;
+  font-size: 34px;
   font-weight: normal;
-  letter-spacing: 1.25px;
-  line-height: 1.4;
-  vertical-align: super;
+  letter-spacing: 1.5px;
+  line-height: 1.29;
 }
 
 .unlockbox-heading {

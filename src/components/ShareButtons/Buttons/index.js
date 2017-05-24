@@ -42,7 +42,7 @@ class Buttons extends Component {
       console.log('tool');
       return (
         <div className="tooltip-parent text-center">
-          <div className="tooltip-starter text-center fadeIn arrow_box">Start here!</div>
+          <div className="tooltip-starter text-center fadeIn arrow_box"><strong>Start here!</strong></div>
         </div>
       );
     } else {
